@@ -1,0 +1,60 @@
+{
+  "note": [
+    {
+      "id": 1,
+      "title": "Market Note",
+      "discription": "1kg Mango , 2kg Allu , 1.5kg Apple , Botel 1 pice",
+      "bgColor": "yellow",
+      "noteDate": "11-02-2023"
+    },
+    {
+      "id": 2,
+      "title": "Brother Birthday",
+      "discription": "This Day I celibrate All Day And buy Cake",
+      "bgColor": "teal",
+      "noteDate": "01-01-2023"
+    },
+    {
+      "id": 3,
+      "title": "New Pankiller",
+      "discription": "This Medicine is Best for body pan I am use Always",
+      "bgColor": "green",
+      "noteDate": "12-01-2023"
+    },
+    {
+      "id": 4,
+      "title": "Pinapple Apple ",
+      "discription": "Apple is Good Frute for every human health ",
+      "bgColor": "white",
+      "noteDate": "28-01-2023"
+    },
+    {
+      "id": 5,
+      "title": "Red Color New",
+      "discription": "This Color is Favrate for me forever ",
+      "bgColor": "orange",
+      "noteDate": "12-12-2023"
+    },
+    {
+      "id": 6,
+      "title": "Save Water Topic",
+      "discription": "This topic is my next program topic",
+      "bgColor": "skyblue",
+      "noteDate": "28-12-2023"
+    },
+    {
+      "title": "Mushther Hussain",
+      "discription": "I'm new web developer 125",
+      "bgColor": "tomato",
+      "noteDate": "Sat Feb 11 2023 22:41:12 GMT+0530 (India Standard Time)",
+      "id": 9
+    },
+    {
+      "title": "Mushther Hussain 1",
+      "discription": "new songs namaste namaste namaste I will send ",
+      "bgColor": "teal",
+      "noteDate": "Sat Feb 11 2023 23:17:55 GMT+0530 (India Standard Time)",
+      "id": 10
+    }
+  ]
+}
