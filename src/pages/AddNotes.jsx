@@ -6,6 +6,12 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContextProvider } from '../context/ContextApi'
 
 
+const initialNoteData = {
+    title: "",
+    discription: "",
+    bgColor: "",
+    noteDate: Date()
+}
 
 const AddNotes = () => {
     const toast = useToast()
@@ -13,15 +19,11 @@ const AddNotes = () => {
     const [isLoading, setIsLoading] = useState(false)
     const { color1, addNoteColor } = useContext(AuthContextProvider);
 
-    const initialNoteData = {
-        title: "",
-        discription: "",
-        bgColor: addNoteColor,
-        noteDate: Date()
-    }
+
 
     const [formData, setFormData] = useState(initialNoteData);
     //https://note-app-database.vercel.app/note
+    console.log(formData);
     const postNoteData = () => {
         setIsLoading(true);
         axios.post(`http://localhost:8080/note`, formData).then(res => {
@@ -39,8 +41,6 @@ const AddNotes = () => {
 
     const handleOnChange = (e) => {
         const { name, value } = e.target;
-
-        //const val = name === "bgColor" ? value = addNoteColor : value;
         setFormData({ ...formData, [name]: value });
     };
 
@@ -77,7 +77,7 @@ const AddNotes = () => {
                     name={'bgColor'}
                     fontFamily={'cursive'}
                     onChange={(e) => { handleOnChange(e) }}
-                    value={formData.bgColor}
+                    value={formData.bgColor = addNoteColor}
                 />
                 <br />
                 <br />

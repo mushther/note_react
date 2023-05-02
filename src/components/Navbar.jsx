@@ -1,6 +1,6 @@
-import { Box, Circle, Flex, Heading, Spacer } from '@chakra-ui/react'
+import { Box, Circle, Flex, Heading, Input, Spacer } from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
-import { FaHome } from 'react-icons/fa';
+import { FaApple, FaHome, FaSearch } from 'react-icons/fa';
 import { IoIosColorPalette } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import { AuthContextProvider } from '../context/ContextApi';
@@ -16,6 +16,11 @@ const Navbar = () => {
                 </Box>
             </Link>
             <Spacer />
+            <Circle size='40px' fontSize={'3xl'}><FaSearch /></Circle>
+            <Input w={"60%"} border={"1px solid black"} placeholder='Search Notes...' />
+            <Link to='/likeimage'>
+                <Circle size='40px' fontSize={'3xl'}><FaApple /></Circle>
+            </Link>
             <Circle size='40px' fontSize={'3xl'}><IoIosColorPalette /></Circle>
             <Circle size='30px' border={'1px solid black'} bg='aqua' onClick={() => { handleThemeChange('aqua') }} color='white' _hover={{ border: '2px solid white' }}></Circle>
             <Circle size='30px' border={'1px solid black'} bg='pink' onClick={() => { handleThemeChange('pink') }} color='white' _hover={{ border: '2px solid white' }}></Circle>

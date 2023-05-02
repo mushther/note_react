@@ -9,16 +9,17 @@ const UpdateNote = () => {
     const [isLoading, setIsLoading] = useState(false)
     const toast = useToast();
     const { color1, addNoteColor } = useContext(AuthContextProvider);
+    const [colorTheme, setColorTheme] = useState(addNoteColor)
     const [data] = useState(JSON.parse(localStorage.getItem("data")));
     const navigate = useNavigate();
 
     const initialNoteData = {
         title: data.title,
         discription: data.discription,
-        bgColor: addNoteColor,
+        bgColor: colorTheme,
         noteDate: Date()
     }
-    console.log(data.id);
+    // console.log(data.id);
     const [formData, setFormData] = useState(initialNoteData);
     //https://note-app-database.vercel.app/note
     const updateNoteData = (id) => {
@@ -34,6 +35,9 @@ const UpdateNote = () => {
             })
             navigate("/");
         })
+            .catch((error) => {
+                console.log(error.response.data);
+            })
     }
 
     const handleChange = (e) => {

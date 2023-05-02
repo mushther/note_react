@@ -6,7 +6,7 @@ import Card from '../components/Card'
 
 const Dashboard = () => {
     const [data, setData] = useState([]);
-
+    //console.log(Date());
     //https://note-app-database.vercel.app/note
     const getData = () => {
         axios.get('http://localhost:8080/note').then((res) => {

@@ -1,21 +1,24 @@
 {
   "note": [
     {
-      "id": 1,
       "title": "Market Note",
       "discription": "1kg Mango , 2kg Allu , 1.5kg Apple , Botel 1 pice",
       "bgColor": "yellow",
-      "noteDate": "11-02-2023"
+      "noteDate": "Fri Apr 28 2023 17:03:45 GMT+0530 (India Standard Time)",
+      "id": 1,
+      "viewed": 2
     },
     {
-      "id": 2,
       "title": "Brother Birthday",
       "discription": "This Day I celibrate All Day And buy Cake",
       "bgColor": "teal",
-      "noteDate": "01-01-2023"
+      "noteDate": "Fri Apr 28 2023 16:52:02 GMT+0530 (India Standard Time)",
+      "id": 2,
+      "viewed": 1
     },
     {
       "id": 3,
+      "viewed": 0,
       "title": "New Pankiller",
       "discription": "This Medicine is Best for body pan I am use Always",
       "bgColor": "green",
@@ -23,6 +26,7 @@
     },
     {
       "id": 4,
+      "viewed": 0,
       "title": "Pinapple Apple ",
       "discription": "Apple is Good Frute for every human health ",
       "bgColor": "white",
@@ -30,6 +34,7 @@
     },
     {
       "id": 5,
+      "viewed": 0,
       "title": "Red Color New",
       "discription": "This Color is Favrate for me forever ",
       "bgColor": "orange",
@@ -37,24 +42,90 @@
     },
     {
       "id": 6,
+      "viewed": 4,
       "title": "Save Water Topic",
       "discription": "This topic is my next program topic",
       "bgColor": "skyblue",
       "noteDate": "28-12-2023"
     },
     {
-      "title": "Mushther Hussain",
+      "title": "Mushther Hussain y",
       "discription": "I'm new web developer 125",
       "bgColor": "tomato",
-      "noteDate": "Sat Feb 11 2023 22:41:12 GMT+0530 (India Standard Time)",
+      "noteDate": "Fri Apr 28 2023 16:52:20 GMT+0530 (India Standard Time)",
+      "viewed": 0,
       "id": 9
     },
     {
       "title": "Mushther Hussain 1",
       "discription": "new songs namaste namaste namaste I will send ",
       "bgColor": "teal",
-      "noteDate": "Sat Feb 11 2023 23:17:55 GMT+0530 (India Standard Time)",
+      "noteDate": "Fri Apr 28 2023 16:52:43 GMT+0530 (India Standard Time)",
+      "viewed": 1,
       "id": 10
+    },
+    {
+      "title": "RAECT",
+      "discription": "USE effaect",
+      "bgColor": "skyblue",
+      "noteDate": "Sun Feb 12 2023 00:32:43 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 11
+    },
+    {
+      "title": "Evaluation Marks ",
+      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
+      "bgColor": "tomato",
+      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 12
+    },
+    {
+      "title": "partial accept",
+      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
+      "bgColor": "green",
+      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 14
+    },
+    {
+      "title": "partial accept",
+      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
+      "bgColor": "tomato",
+      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 16
+    },
+    {
+      "title": "Evaluation Marks ",
+      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
+      "bgColor": "orange",
+      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 17
+    },
+    {
+      "title": "Intersection of Array",
+      "discription": "new india Button colorScheme facebook Dislike Button\n",
+      "bgColor": "teal",
+      "noteDate": "Fri Apr 28 2023 16:50:57 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 18
+    },
+    {
+      "title": "Evaluation Marks ",
+      "discription": "123",
+      "bgColor": "skyblue",
+      "noteDate": "Fri Apr 28 2023 17:05:53 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 19
+    }
+  ],
+  "like": [
+    {
+      "name": "Salman Khan",
+      "like": 16,
+      "id": 1
     }
   ]
 }
