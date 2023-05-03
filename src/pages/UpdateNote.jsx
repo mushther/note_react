@@ -9,21 +9,24 @@ const UpdateNote = () => {
     const [isLoading, setIsLoading] = useState(false)
     const toast = useToast();
     const { color1, addNoteColor } = useContext(AuthContextProvider);
-    const [colorTheme, setColorTheme] = useState(addNoteColor)
+    //const [colorTheme, setColorTheme] = useState(addNoteColor)
     const [data] = useState(JSON.parse(localStorage.getItem("data")));
     const navigate = useNavigate();
 
     const initialNoteData = {
         title: data.title,
         discription: data.discription,
-        bgColor: colorTheme,
-        noteDate: Date()
+        bgColor: addNoteColor,
+        noteDate: Date(),
+        viewed: data.viewed + 1
     }
-    // console.log(data.id);
     const [formData, setFormData] = useState(initialNoteData);
     //https://note-app-database.vercel.app/note
+    console.log("outOfFunction", formData);
+
     const updateNoteData = (id) => {
         setIsLoading(true)
+        console.log(formData);
         axios.put(`http://localhost:8080/note/${id}`, formData).then(res => {
             setIsLoading(false)
             toast({

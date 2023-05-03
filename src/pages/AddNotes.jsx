@@ -10,7 +10,8 @@ const initialNoteData = {
     title: "",
     discription: "",
     bgColor: "",
-    noteDate: Date()
+    noteDate: Date(),
+    viewed: 0
 }
 
 const AddNotes = () => {
@@ -44,7 +45,7 @@ const AddNotes = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    console.log(formData);
+    //console.log(formData);
     return (
         <Box p={'2% 10% 10% 10%'} h='585px' borderRadius={10} w={'82%'} ml={'16%'} mt={'106px'}>
             <Heading fontFamily={'cursive'}>Add Note</Heading>

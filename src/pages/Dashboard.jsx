@@ -1,16 +1,20 @@
 import { Box, Grid, Heading } from '@chakra-ui/react';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, } from 'react-router-dom';
 import Card from '../components/Card'
+import { AuthContextProvider } from '../context/ContextApi';
 
 const Dashboard = () => {
-    const [data, setData] = useState([]);
+    //const [data1, setData1] = useState([]);
+    const { handleGetData, data } = useContext(AuthContextProvider);
+
     //console.log(Date());
     //https://note-app-database.vercel.app/note
     const getData = () => {
         axios.get('http://localhost:8080/note').then((res) => {
-            setData(res.data);
+            // setData(res.data);
+            handleGetData(res.data);
         })
     }
 
@@ -28,7 +32,7 @@ const Dashboard = () => {
             <Heading pt={'40px'} fontFamily={'cursive'}> Dashboard</Heading>
             <Grid w='95%' m='auto' p={10} gridTemplateColumns={'repeat(4, 1fr)'} gap={5}>
                 {data.map((el) => (
-                    <Link to='/notedetails'>
+                    <Link to='/notedetails' key={el.id}>
                         <Card
                             key={el.id}
                             bgColor={el.bgColor}

@@ -10,7 +10,7 @@ const NoteDetails = () => {
     const toast = useToast();
     const navigate = useNavigate()
     const [data] = useState(JSON.parse(localStorage.getItem("data")));
-    const { handleAddNoteColor } = useContext(AuthContextProvider)
+    const { handleAddNoteColor, handleDeleteCApi } = useContext(AuthContextProvider)
 
     const handleDelete = (id) => {
         onClose();

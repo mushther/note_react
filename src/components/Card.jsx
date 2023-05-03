@@ -2,6 +2,7 @@ import { AttachmentIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import React, { useContext, useState } from 'react'
 import { FaEye, FaRegEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { AuthContextProvider } from '../context/ContextApi';
 import axios from 'axios';
@@ -31,11 +32,13 @@ const Card = ({ cardDate, cardHeading, bgColor, el }) => {
             </Flex>
             <Heading fontFamily={'cursive'} size={'md'} fontWeight='semibold' >{cardHeading}</Heading>
             <Text fontFamily={'cursive'} >{cardDate.slice(0, 15)}</Text>
-            <Text display={'flex'} justifyContent='end'  >
+            <Text display={'flex'} justifyContent='end' gap={3}  >
                 <Link to='/updateNote'>
                     <Text onClick={() => { handleClick() }} _hover={{ fontSize: '15px', color: 'white' }}><FaRegEdit /></Text>
                 </Link>
-
+                <Link>
+                    <Text onClick={() => { handleClick() }} _hover={{ fontSize: '15px', color: 'white' }}><MdDelete /></Text>
+                </Link>
             </Text>
 
         </Box>
