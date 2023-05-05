@@ -33,12 +33,20 @@ const UpdateNote = () => {
                 title: 'Note Updated.',
                 description: "We've updated your note successfully.",
                 status: 'success',
-                duration: 9000,
+                duration: 6000,
                 isClosable: true,
             })
             navigate("/");
         })
             .catch((error) => {
+                setIsLoading(false);
+                toast({
+                    title: 'Not Updated.',
+                    description: "Sorry We've unable to updated your note.",
+                    status: 'error',
+                    duration: 6000,
+                    isClosable: true,
+                })
                 console.log(error.response.data);
             })
     }

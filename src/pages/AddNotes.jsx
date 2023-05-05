@@ -24,7 +24,7 @@ const AddNotes = () => {
 
     const [formData, setFormData] = useState(initialNoteData);
     //https://note-app-database.vercel.app/note
-    console.log(formData);
+    // console.log(formData);
     const postNoteData = () => {
         setIsLoading(true);
         axios.post(`http://localhost:8080/note`, formData).then(res => {
@@ -37,6 +37,16 @@ const AddNotes = () => {
                 isClosable: true,
             })
             navigate("/");
+        }).catch((err) => {
+            console.log(err);
+            setIsLoading(false)
+            toast({
+                title: 'Not Saved.',
+                description: "Sorry We've unable to saved your note.",
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            })
         })
     }
 

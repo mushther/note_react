@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from 'react'
 import { Link, } from 'react-router-dom';
 import Card from '../components/Card'
 import { AuthContextProvider } from '../context/ContextApi';
+import { FaPlus } from 'react-icons/fa';
 
 const Dashboard = () => {
     //const [data1, setData1] = useState([]);
@@ -13,7 +14,8 @@ const Dashboard = () => {
     //https://note-app-database.vercel.app/note
     const getData = () => {
         axios.get('http://localhost:8080/note').then((res) => {
-            // setData(res.data);
+            //setData(res.data);
+            //console.log(newMsg);
             handleGetData(res.data);
         })
     }
@@ -25,11 +27,9 @@ const Dashboard = () => {
     //console.log(data);
 
     return (
-        <Box
-            bg='#f1f1f1'
-            //bg='#c9c6c6'
-            h={'2xl'} w={'86%'} ml={'14%'} mt={'56px'}>
+        <Box w={'86%'} ml={'14%'} mt={'56px'}>
             <Heading pt={'40px'} fontFamily={'cursive'}> Dashboard</Heading>
+
             <Grid w='95%' m='auto' p={10} gridTemplateColumns={'repeat(4, 1fr)'} gap={5}>
                 {data.map((el) => (
                     <Link to='/notedetails' key={el.id}>
@@ -45,6 +45,21 @@ const Dashboard = () => {
                 ))
 
                 }
+                <Link to='/addnote'>
+
+                    <Box
+                        bg={"yellow"}
+                        borderRadius={10}
+                        w={'100%'}
+                        display={'flex'}
+                        justifyContent={'center'}
+                        alignItems={'center'}
+                        h={40} p={4}
+                        fontSize={'40px'}
+                        transition={'fontSize 2s'}
+                        _hover={{ fontSize: "50px", borderTop: "6px solid black" }}>
+                        <FaPlus /></Box>
+                </Link>
             </Grid>
         </Box>
     )

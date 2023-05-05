@@ -1,19 +1,12 @@
 {
   "note": [
     {
-      "title": "Market Note",
-      "discription": "1kg Mango , 2kg Allu , 1.5kg Apple , Botel 1 pice",
-      "bgColor": "yellow",
-      "noteDate": "Wed May 03 2023 13:44:46 GMT+0530 (India Standard Time)",
-      "viewed": 3,
-      "id": 1
-    },
-    {
       "title": "Brother Birthday ",
       "discription": "This Day I celibrate All Day And buy Cake ",
-      "bgColor": "teal",
+      "bgColor": "yellow",
       "noteDate": "Wed May 03 2023 13:47:02 GMT+0530 (India Standard Time)",
-      "viewed": 11,
+      "wishList": "No",
+      "viewed": 8,
       "id": 2
     },
     {
@@ -21,30 +14,34 @@
       "discription": "This Medicine is Best for body pan I am use Always",
       "bgColor": "green",
       "noteDate": "Wed May 03 2023 12:43:27 GMT+0530 (India Standard Time)",
-      "viewed": 5,
+      "wishList": "Yes",
+      "viewed": 8,
       "id": 3
     },
     {
       "id": 4,
-      "viewed": 1,
+      "viewed": 3,
       "title": "Pinapple Apple ",
       "discription": "Apple is Good Frute for every human health ",
+      "wishList": "Yes",
       "bgColor": "white",
       "noteDate": "28-01-2023"
     },
     {
       "id": 5,
-      "viewed": 0,
+      "viewed": 1,
       "title": "Red Color New",
       "discription": "This Color is Favrate for me forever ",
+      "wishList": "No",
       "bgColor": "orange",
       "noteDate": "12-12-2023"
     },
     {
       "id": 6,
-      "viewed": 4,
+      "viewed": 6,
       "title": "Save Water Topic",
       "discription": "This topic is my next program topic",
+      "wishList": "Yes",
       "bgColor": "skyblue",
       "noteDate": "28-12-2023"
     },
@@ -53,108 +50,70 @@
       "discription": "I'm new web developer 125",
       "bgColor": "tomato",
       "noteDate": "Fri Apr 28 2023 16:52:20 GMT+0530 (India Standard Time)",
-      "viewed": 1,
+      "wishList": "No",
+      "viewed": 4,
       "id": 9
-    },
-    {
-      "title": "Mushther Hussain 1",
-      "discription": "new songs namaste namaste namaste I will send ",
-      "bgColor": "teal",
-      "noteDate": "Fri Apr 28 2023 16:52:43 GMT+0530 (India Standard Time)",
-      "viewed": 1,
-      "id": 10
     },
     {
       "title": "RAECT",
       "discription": "USE effaect",
       "bgColor": "skyblue",
       "noteDate": "Sun Feb 12 2023 00:32:43 GMT+0530 (India Standard Time)",
-      "viewed": 0,
+      "wishList": "No",
+      "viewed": 1,
       "id": 11
     },
     {
       "title": "Evaluation Marks ",
-      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
-      "bgColor": "tomato",
-      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
-      "viewed": 1,
+      "discription": "",
+      "bgColor": "yellow",
+      "noteDate": "Fri May 05 2023 19:14:01 GMT+0530 (India Standard Time)",
+      "viewed": 0,
       "id": 12
     },
     {
       "title": "partial accept",
-      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
-      "bgColor": "green",
-      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
-      "viewed": 3,
+      "discription": "",
+      "bgColor": "tomato",
+      "noteDate": "Fri May 05 2023 19:14:01 GMT+0530 (India Standard Time)",
+      "viewed": 0,
+      "id": 13
+    },
+    {
+      "title": "kk",
+      "discription": "",
+      "bgColor": "skyblue",
+      "noteDate": "Fri May 05 2023 19:14:01 GMT+0530 (India Standard Time)",
+      "viewed": 0,
       "id": 14
     },
     {
-      "title": "partial accept",
-      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
-      "bgColor": "tomato",
-      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
-      "viewed": 0,
-      "id": 16
-    },
-    {
-      "title": "Evaluation Marks ",
-      "discription": "        setFormData({ ...formData, [name]: val });\n        setFormData({ ...formData, [name]: val });\n",
+      "title": "15 of Array",
+      "discription": "",
       "bgColor": "orange",
-      "noteDate": "Sun Feb 12 2023 01:08:12 GMT+0530 (India Standard Time)",
-      "viewed": 1,
-      "id": 17
-    },
-    {
-      "title": "Intersection of Array",
-      "discription": "new india Button colorScheme facebook Dislike Button\n",
-      "bgColor": "teal",
-      "noteDate": "Wed May 03 2023 12:37:55 GMT+0530 (India Standard Time)",
-      "viewed": 2,
-      "id": 18
-    },
-    {
-      "title": "Evaluation Marks ",
-      "discription": "123",
-      "bgColor": "skyblue",
-      "noteDate": "Fri Apr 28 2023 17:05:53 GMT+0530 (India Standard Time)",
+      "noteDate": "Fri May 05 2023 19:14:01 GMT+0530 (India Standard Time)",
       "viewed": 0,
-      "id": 19
-    },
-    {
-      "title": "Intersection",
-      "discription": "handleSearch handleSearch handleSearch\n",
-      "bgColor": "yellow",
-      "noteDate": "Tue May 02 2023 21:03:33 GMT+0530 (India Standard Time)",
-      "viewed": 1,
-      "id": 20
-    },
-    {
-      "title": "Note No 16",
-      "discription": "Dila namaste namaste namaste ",
-      "bgColor": "yellow",
-      "noteDate": "Wed May 03 2023 15:48:43 GMT+0530 (India Standard Time)",
-      "viewed": 0,
-      "id": 21
+      "id": 15
     },
     {
       "title": "multiple code",
-      "discription": "my name is the best way to ",
-      "bgColor": "tomato",
-      "noteDate": "Wed May 03 2023 15:48:43 GMT+0530 (India Standard Time)",
-      "viewed": 0,
-      "id": 22
+      "discription": "new",
+      "bgColor": "teal",
+      "noteDate": "Fri May 05 2023 19:27:40 GMT+0530 (India Standard Time)",
+      "viewed": 1,
+      "id": 16
     }
   ],
   "like": [
     {
       "name": "Salman Khan",
-      "like": 16,
+      "like": 17,
       "id": 1
     }
   ],
   "themeColor": [
     {
-      "bgThemeColor": "aqua",
+      "bgThemeColor": "lightgreen",
       "id": 1
     }
   ]
