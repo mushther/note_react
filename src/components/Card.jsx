@@ -7,44 +7,12 @@ import { Link } from 'react-router-dom';
 import { AuthContextProvider } from '../context/ContextApi';
 import axios from 'axios';
 
-const Card = ({ cardDate, cardHeading, bgColor, el }) => {
+const Card = ({ cardDate, cardHeading, bgColor, el, updateViewedWishList }) => {
     const toast = useToast()
     const [wishList] = useState(el.wishList);
     const { handleAddNoteColor } = useContext(AuthContextProvider)
 
-    const updateViewedWishList = (msg, id) => {
-        axios.patch(`http://localhost:8080/note/${id}`,
-            { wishList: msg }
-        ).then((res) => {
-            if (msg === "Yes") {
-                toast({
-                    title: 'Added',
-                    description: "Note is Added to Favourite List.",
-                    status: 'success',
-                    duration: 6000,
-                    isClosable: true,
 
-                })
-            } else if (msg === "No") {
-                toast({
-                    title: 'Removed',
-                    description: "Note is Removed to Favourite List.",
-                    status: 'warning',
-                    duration: 6000,
-                    isClosable: true,
-
-                })
-            }
-        }).catch((err) => {
-            toast({
-                title: 'Not Added',
-                description: "Note is not Added to Favourite.",
-                status: 'error',
-                duration: 6000,
-                isClosable: true,
-            })
-        })
-    }
     const handleClick = (e) => {
         localStorage.setItem("data", JSON.stringify(el))
         handleAddNoteColor(bgColor);
@@ -52,7 +20,7 @@ const Card = ({ cardDate, cardHeading, bgColor, el }) => {
     }
 
     return (
-        <Box bg={bgColor} borderRadius={10} w={'100%'} transition={'width 1s,height 1s'} h={40} p={4} onClick={() => { handleClick() }} _hover={{ position: 'relative', zIndex: '2', width: "110%", height: 44, borderTop: "6px solid black" }}>
+        <Box bg={bgColor} borderRadius={10} w={'100%'} h={40} p={4} onClick={() => { handleClick() }} _hover={{ boxShadow: "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset", borderTop: "6px solid black" }}>
             <Flex justifyContent={'space-between'}>
                 <Text fontWeight='semibold' display={'flex'} justifyContent='start' fontSize={'xl'}><AttachmentIcon /></Text>
                 <Flex gap={1}>

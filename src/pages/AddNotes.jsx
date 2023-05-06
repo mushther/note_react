@@ -11,7 +11,8 @@ const initialNoteData = {
     discription: "",
     bgColor: "",
     noteDate: Date(),
-    viewed: 0
+    viewed: 0,
+    wishList: "No"
 }
 
 const AddNotes = () => {
@@ -59,13 +60,19 @@ const AddNotes = () => {
     return (
         <Box p={'2% 10% 10% 10%'} h='585px' borderRadius={10} w={'82%'} ml={'16%'} mt={'106px'}>
             <Heading fontFamily={'cursive'}>Add Note</Heading>
-            <FormControl>
+            <FormControl border={'1px solid black'} p={5} borderRadius={10}>
                 <FormLabel fontFamily={'cursive'}>Title</FormLabel>
                 <Input
                     type='text'
                     name='title'
                     fontFamily={'cursive'}
-                    placeholder='Write title'
+                    placeholder='Write title here...'
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
                     onChange={(e) => { handleOnChange(e) }}
                     value={formData.title}
                 />
@@ -74,12 +81,24 @@ const AddNotes = () => {
                     name={'discription'}
                     fontFamily={'cursive'}
                     placeholder='Write Start Notes here ....'
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
                     onChange={(e) => { handleOnChange(e) }}
                     value={formData.discription}
                 />
                 <FormLabel fontFamily={'cursive'}>Date</FormLabel>
                 <Input
                     name={'noteDate'}
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
                     onChange={() => { handleOnChange() }}
                     value={formData.noteDate}
                 />
@@ -87,6 +106,12 @@ const AddNotes = () => {
                 <Input
                     name={'bgColor'}
                     fontFamily={'cursive'}
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
                     onChange={(e) => { handleOnChange(e) }}
                     value={formData.bgColor = addNoteColor}
                 />

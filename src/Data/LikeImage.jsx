@@ -66,7 +66,7 @@ const LikeImage = () => {
         <Box p={'2% 10% 10% 10%'} border={"1px solid black"} h='585px' borderRadius={10} w={'82%'} ml={'16%'} mt={'106px'}>
             <Heading>Image Like</Heading>
             <br />
-            <Image m='auto' w='50%' height={'400px'} src='https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1akSeR.img?w=1920&h=1080&q=60&m=2&f=jpg' />
+            <Image m='auto' w='40%' height={'300px'} src='https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1akSeR.img?w=1920&h=1080&q=60&m=2&f=jpg' />
             {data.map((item) => (
                 <Box>
                     <Heading>{item.name}</Heading>

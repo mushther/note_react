@@ -57,28 +57,48 @@ const UpdateNote = () => {
     }
 
     return (
-        <Box p={'2% 10% 10% 10%'} h='585px' borderRadius={10} w={'82%'} ml={'16%'} mt={'106px'}>
-            <Heading fontFamily={'cursive'}>UpdateNote Note</Heading>
-            <FormControl>
+        <Box p={'2% 10% 10% 10%'} h='685px' borderRadius={10} w={'82%'} ml={'16%'} mt={'106px'}>
+            <Heading fontFamily={'cursive'} pb={5}>UpdateNote Note</Heading>
+            <FormControl border={'1px solid black'} p={5} borderRadius={10}>
                 <FormLabel fontFamily={'cursive'}>Title</FormLabel>
                 <Input
                     name='title'
                     onChange={(e) => { handleChange(e) }}
                     value={formData.title}
                     fontFamily={'cursive'}
-                    placeholder='Write title ' />
+                    placeholder='Write title '
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
+                />
                 <FormLabel fontFamily={'cursive'}>Write Note</FormLabel>
                 <Textarea
                     name='discription'
                     onChange={(e) => { handleChange(e) }}
                     value={formData.discription}
                     fontFamily={'cursive'}
-                    placeholder='Write Start Notes here ....' />
+                    placeholder='Write Start Notes here ....'
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
+                />
                 <FormLabel fontFamily={'cursive'}>Date</FormLabel>
                 <Input
                     name='noteDate'
                     onChange={(e) => { handleChange(e) }}
                     value={formData.noteDate}
+                    border={"0px solid black"}
+                    focusBorderColor="none"
+                    ml={-3}
+                    _focusVisible={{
+                        border: "0px solid red"
+                    }}
                 />
                 <FormLabel fontFamily={'cursive'}>Color</FormLabel>
                 <Text p='3px' borderRadius={6} border='1px solid black' w='20%' bg={addNoteColor}>{addNoteColor.toUpperCase()}</Text>
