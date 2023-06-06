@@ -12,7 +12,7 @@ const Search = () => {
 
     const handleSearch = () => {
         // e.preventDefault()
-        axios.get(`http://localhost:8080/note?q=${value}`).then((res) => {
+        axios.get(`https://renderapi-h6ct.onrender.com/note?q=${value}`).then((res) => {
             handleGetData(res.data);
             // setValue("");
             // console.log(res.data);

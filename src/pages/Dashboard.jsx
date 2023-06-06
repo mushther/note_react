@@ -1,6 +1,6 @@
 import { Box, Grid, Heading, useToast } from '@chakra-ui/react';
 import axios from 'axios';
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, } from 'react-router-dom';
 import Card from '../components/Card'
 import { AuthContextProvider } from '../context/ContextApi';
@@ -8,14 +8,14 @@ import { FaPlus } from 'react-icons/fa';
 
 const Dashboard = () => {
     const toast = useToast();
-    //const [data1, setData1] = useState([]);
+    const [msg1, setMsg1] = useState("");
     const { handleGetData, data } = useContext(AuthContextProvider);
 
     //console.log(Date());
     //http://localhost:8080/note
     //https://note-app-database.vercel.app/note
     const getData = () => {
-        axios.get('http://localhost:8080/note').then((res) => {
+        axios.get('https://renderapi-h6ct.onrender.com/note').then((res) => {
             //setData(res.data);
             //console.log(newMsg);
             handleGetData(res.data);
@@ -24,13 +24,16 @@ const Dashboard = () => {
 
     useEffect(() => {
         getData()
-    }, []);
+        // console.log("triggggg");
+    }, [msg1]);
 
     const updateViewedWishList = (msg, id) => {
-        axios.patch(`http://localhost:8080/note/${id}`,
+        axios.patch(`https://renderapi-h6ct.onrender.com/note/${id}`,
             { wishList: msg }
         ).then((res) => {
-            getData()
+            //setMsg1(msg)
+            //getData()
+            window.location.reload();
             if (msg === "Yes") {
                 toast({
                     title: 'Added',

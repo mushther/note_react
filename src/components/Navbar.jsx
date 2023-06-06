@@ -21,7 +21,7 @@ const Navbar = () => {
                 <Search />
             </Flex>
             <Flex alignItems={'center'}>
-                <Link to='/likeimage'>
+                <Link to='/details'>
                     <Circle size='40px' fontSize={'3xl'}><FaApple /></Circle>
                 </Link>
                 <Circle size='40px' fontSize={'3xl'}><IoIosColorPalette /></Circle>

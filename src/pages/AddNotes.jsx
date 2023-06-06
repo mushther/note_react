@@ -6,14 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContextProvider } from '../context/ContextApi'
 
 
-const initialNoteData = {
-    title: "",
-    discription: "",
-    bgColor: "",
-    noteDate: Date(),
-    viewed: 0,
-    wishList: "No"
-}
 
 const AddNotes = () => {
     const toast = useToast()
@@ -21,6 +13,14 @@ const AddNotes = () => {
     const [isLoading, setIsLoading] = useState(false)
     const { color1, addNoteColor } = useContext(AuthContextProvider);
 
+    const initialNoteData = {
+        title: "",
+        discription: "",
+        bgColor: addNoteColor,
+        noteDate: Date(),
+        viewed: 0,
+        wishList: "No"
+    }
 
 
     const [formData, setFormData] = useState(initialNoteData);
@@ -28,7 +28,7 @@ const AddNotes = () => {
     // console.log(formData);
     const postNoteData = () => {
         setIsLoading(true);
-        axios.post(`http://localhost:8080/note`, formData).then(res => {
+        axios.post(`https://renderapi-h6ct.onrender.com/note`, formData).then(res => {
             setIsLoading(false);
             toast({
                 title: 'Note Saved.',
@@ -58,15 +58,15 @@ const AddNotes = () => {
 
     //console.log(formData);
     return (
-        <Box p={'2% 10% 10% 10%'} h='585px' borderRadius={10} w={'82%'} ml={'16%'} mt={'106px'}>
+        <Box p={'2% 10% 10% 10%'} h='585px' borderRadius={10} border={'1px solid black'} w={'82%'} ml={'16%'} mt={'106px'}>
             <Heading fontFamily={'cursive'}>Add Note</Heading>
-            <FormControl border={'1px solid black'} p={5} borderRadius={10}>
-                <FormLabel fontFamily={'cursive'}>Title</FormLabel>
+            <FormControl >
                 <Input
                     type='text'
                     name='title'
                     fontFamily={'cursive'}
-                    placeholder='Write title here...'
+                    fontSize={'xl'}
+                    placeholder='Title'
                     border={"0px solid black"}
                     focusBorderColor="none"
                     ml={-3}
@@ -76,7 +76,6 @@ const AddNotes = () => {
                     onChange={(e) => { handleOnChange(e) }}
                     value={formData.title}
                 />
-                <FormLabel fontFamily={'cursive'}>Write Note</FormLabel>
                 <Textarea
                     name={'discription'}
                     fontFamily={'cursive'}
@@ -90,7 +89,6 @@ const AddNotes = () => {
                     onChange={(e) => { handleOnChange(e) }}
                     value={formData.discription}
                 />
-                <FormLabel fontFamily={'cursive'}>Date</FormLabel>
                 <Input
                     name={'noteDate'}
                     border={"0px solid black"}
@@ -102,7 +100,6 @@ const AddNotes = () => {
                     onChange={() => { handleOnChange() }}
                     value={formData.noteDate}
                 />
-                <FormLabel fontFamily={'cursive'}>Color</FormLabel>
                 <Input
                     name={'bgColor'}
                     fontFamily={'cursive'}
@@ -117,12 +114,13 @@ const AddNotes = () => {
                 />
                 <br />
                 <br />
+
                 <Text
                     p='3px'
                     borderRadius={6}
                     border="1px solid black"
                     w='20%'
-                    bg={addNoteColor}>{addNoteColor.toUpperCase()}</Text>
+                    bg={formData.bgColor}>{formData.bgColor.toUpperCase()}</Text>
                 <Spacer />
                 <br />
                 <Button onClick={postNoteData} bg={color1} w='auto' isLoading={isLoading} loadingText='Saving' gap={2} _hover={{ border: "1px solid black", fontSize: "18px" }}><FaSave /> Save Note</Button>

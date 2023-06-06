@@ -27,7 +27,7 @@ const UpdateNote = () => {
     const updateNoteData = (id) => {
         setIsLoading(true)
         console.log(formData);
-        axios.put(`http://localhost:8080/note/${id}`, formData).then(res => {
+        axios.put(`https://renderapi-h6ct.onrender.com/note/${id}`, formData).then(res => {
             setIsLoading(false)
             toast({
                 title: 'Note Updated.',
@@ -101,7 +101,9 @@ const UpdateNote = () => {
                     }}
                 />
                 <FormLabel fontFamily={'cursive'}>Color</FormLabel>
-                <Text p='3px' borderRadius={6} border='1px solid black' w='20%' bg={addNoteColor}>{addNoteColor.toUpperCase()}</Text>
+                <Input type='color' name='bgColor'
+                    onChange={(e) => { handleChange(e) }} />
+
                 <Spacer />
                 <br />
                 <Button onClick={() => { updateNoteData(data.id) }} bg={color1} w='auto' isLoading={isLoading} loadingText='Saving' gap={2} _hover={{ border: "1px solid black", fontSize: "18px" }}><FaChartBar />Update Note</Button>

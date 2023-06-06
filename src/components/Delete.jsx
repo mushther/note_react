@@ -14,7 +14,7 @@ const Delete = () => {
     const handleDelete = (id) => {
         console.log(id);
         onClose();
-        axios.delete(`http://localhost:8080/note/${id}`).then(res => {
+        axios.delete(`https://renderapi-h6ct.onrender.com/note/${id}`).then(res => {
             toast({
                 title: 'Note Deleted.',
                 description: "Your note deleted successfully.",

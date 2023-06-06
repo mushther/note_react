@@ -8,7 +8,7 @@ const ContextApi = ({ children }) => {
     const [data, setData] = useState([])
     const [addNoteColor, setAddNoteColor] = useState('teal')
     const getData = () => {
-        axios.get('http://localhost:8080/themeColor').then((res) => {
+        axios.get('https://renderapi-h6ct.onrender.com/themeColor').then((res) => {
             // setData(res.data);
             // console.log(res.data[0].bgThemeColor);
             setColor1(res.data[0].bgThemeColor);
@@ -21,7 +21,7 @@ const ContextApi = ({ children }) => {
 
 
     const handleThemeChange = (color, id) => {
-        axios.put(`http://localhost:8080/themeColor/${id}`, { bgThemeColor: color }).then((res) => {
+        axios.put(`https://renderapi-h6ct.onrender.com/themeColor/${id}`, { bgThemeColor: color }).then((res) => {
             setColor1(res.data.bgThemeColor);
             //console.log(res.data.bgThemeColor);
         })

@@ -11,7 +11,7 @@ const NoteDetails = () => {
     const [data] = useState(JSON.parse(localStorage.getItem("data")));
     //const [id] = useState(data.id)
     const updateViewed = (view1, id) => {
-        axios.patch(`http://localhost:8080/note/${id}`,
+        axios.patch(`https://renderapi-h6ct.onrender.com/note/${id}`,
             { viewed: view1 + 1 }
         )
     }
